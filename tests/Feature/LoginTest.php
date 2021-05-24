@@ -26,6 +26,7 @@ class LoginTest extends TestCase
         $test = new TestController();
         $request = new Request();
         $result = $test->index($request, 5);
+        $this->assertTrue(false);
         $this->assertJsonStringEqualsJsonString(json_encode(["params" => 5]), $result->content());
     }
 }
